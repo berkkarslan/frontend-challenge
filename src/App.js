@@ -1,23 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import { Navbar, Nav, Button } from "react-bootstrap"
+import { useAuth0 } from "@auth0/auth0-react";
+import 'bootstrap/dist/css/bootstrap.min.css';
+import UserProfile from "./components/UserProfile";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+const App = () => {
+  const { isAuthenticated,loginWithRedirect,logout } = useAuth0();
+
+  return  (
+    <div>
+      <Navbar bg="dark" variant="dark">
+        <Navbar.Brand href="#home">Auth0</Navbar.Brand>
+        <Nav className="ml-auto">
+        {
+            isAuthenticated
+              ? (
+                <Button onClick={() => logout()}>Logout</Button>
+              ) : (
+                <Button onClick={() => loginWithRedirect()}>Login</Button>
+              )
+          }
+        </Nav>        
+      </Navbar>
+      <UserProfile />
     </div>
   );
 }
