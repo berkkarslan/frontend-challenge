@@ -1,0 +1,29 @@
+{
+  
+  "products": [
+    {
+      "id":1,
+      "code":"vision-violet",
+      "name":"Vision Violet",
+      "photo":"https://bilicra.com/wp-content/uploads/2021/01/Lacivert-1.png",
+      "price":1099,
+      "lastupdated":""
+    },
+    {
+      "id":2,
+      "code":"bilicra-iris",
+      "name":"Iris",
+      "photo":"https://bilicra.com/wp-content/uploads/2020/11/iris-1024.png",
+      "price":300,
+      "lastupdated":""
+    },
+    {
+      "id":3,
+      "code":"bilicra-join",
+      "name":"join",
+      "photo":"https://bilicra.com/wp-content/uploads/2021/01/join-3-low-res.png",
+      "price":118,
+      "lastupdated":""
+    }
+  ]
+}
