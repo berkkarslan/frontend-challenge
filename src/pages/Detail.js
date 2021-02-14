@@ -12,7 +12,9 @@ const Detail = (props) => {
   useEffect(() => {
     //setItemDetails(props);
     async function fetchData() {
-      const result = await axios(`http://localhost:3000/products/${id}`);
+      const result = await axios(
+        `https://berkkarslan-json-server.herokuapp.com/products/${id}`
+      );
       setItemDetails(result.data);
       setIsLoading(false);
     }

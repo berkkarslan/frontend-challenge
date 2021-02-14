@@ -8,7 +8,9 @@ const Home = () => {
 
   useEffect(() => {
     async function fetchData() {
-      const result = await axios("http://localhost:3000/products");
+      const result = await axios(
+        "https://berkkarslan-json-server.herokuapp.com/products"
+      );
       setProducts(result.data);
     }
     fetchData();
