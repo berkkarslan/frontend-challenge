@@ -3,7 +3,7 @@ import { Navbar, Nav, Button } from "react-bootstrap";
 import { useAuth0 } from "@auth0/auth0-react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
-import { Home, Profile, Detail } from "./pages/";
+import { Home, Profile, Detail, Edit, Create } from "./pages/";
 import "./App.css";
 
 const App = () => {
@@ -38,6 +38,8 @@ const App = () => {
           <Route path="/" exact component={Home} />
           <Route path="/profile" component={Profile} />
           <Route path="/detail/:id" component={Detail} />
+          <Route path="/edit/:id" component={Edit} />
+          <Route path="/create" component={Create} />
         </Switch>
       </div>
     </Router>
