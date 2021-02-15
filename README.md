@@ -1,5 +1,7 @@
 Demo : https://berkkarslan-frontend-challenge.herokuapp.com/
 
+Json-Server Api : https://berkkarslan-json-server.herokuapp.com/
+
 ## Available Scripts
 
 In the project directory, you can run:
