@@ -7,14 +7,27 @@ import { useAuth0 } from "@auth0/auth0-react";
 
 const Home = () => {
   const [products, setProducts] = useState([]);
-  const { isAuthenticated } = useAuth0();
+  const { isAuthenticated, getAccessTokenSilently } = useAuth0();
+  const token = getAccessTokenSilently;
   useEffect(() => {
     async function fetchData() {
       const result = await axios(
         "https://berkkarslan-json-server.herokuapp.com/products"
       );
+
       setProducts(result.data);
     }
+    async function getToken() {
+      /*axios.interceptors.request.use(function (config) {
+        config.headers.Authorization = `Bearer ${result}`;
+
+        return config;
+      });*/
+    }
+    if (isAuthenticated) {
+      getToken();
+    }
+
     fetchData();
   }, []);
 

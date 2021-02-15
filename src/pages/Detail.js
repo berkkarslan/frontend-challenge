@@ -21,7 +21,7 @@ const Detail = (props) => {
       setIsLoading(false);
     }
     fetchData();
-  }, []);
+  }, [id]);
 
   if (isLoading) {
     return <div>loading...</div>;
@@ -40,7 +40,11 @@ const Detail = (props) => {
     <div className="py-5">
       <Row>
         <Col md={6} className="d-flex justify-content-center ">
-          <img className="img-fluid" src={itemDetails.photo} alt="product" />
+          <img
+            className="img-fluid h-75"
+            src={itemDetails.photo}
+            alt="product"
+          />
         </Col>
         <Col
           md={6}

@@ -18,14 +18,14 @@ const App = () => {
               Home
             </Link>
           </Nav>
-          <Nav className="ml-auto">
+          <Nav className="ml-auto align-items-center">
             {isAuthenticated ? (
               <React.Fragment>
-                <Nav.Link className="text-white">
+                <Nav className="text-white mr-3">
                   <Link className="text-white" to="/profile">
                     Profile
                   </Link>
-                </Nav.Link>
+                </Nav>
                 <Button onClick={() => logout()}>Logout</Button>
               </React.Fragment>
             ) : (

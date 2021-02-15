@@ -99,7 +99,7 @@ const Edit = (props) => {
             }
             max={999}
             min={1}
-            placeholder="Smart Watch"
+            placeholder="200"
           />
           <Form.Control.Feedback type="invalid">
             Price must be higher than 0, and if higher than 999
